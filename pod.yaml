@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-djangoapp
+spec:
+  selector:
+    matchLabels:
+      app: my-djangoapp
+  template:
+    metadata:
+      labels:
+        app: my-djangoapp
+    spec:
+      containers:
+      - name: my-djangoapp
+        image: demoacrtml.azurecr.io/jenkins_demo/django_v1:latest
+        ports:
+        - containerPort: 8080
