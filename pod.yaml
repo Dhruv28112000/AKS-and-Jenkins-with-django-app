@@ -14,5 +14,6 @@ spec:
       containers:
       - name: my-djangoapp
         image: demoacrtml.azurecr.io/jenkins_demo/django_v1:latest
-        ports:
-        - containerPort: 8080
+        imagePullPolicy: IfNotPresent
+      imagePullSecrets:
+      - name: acr-secret
