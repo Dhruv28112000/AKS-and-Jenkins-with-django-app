@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: my-djangoapp
-        image: demoacrtml.azurecr.io/jenkins_demo/django_v1:latest
+        image: demoacrtml.azurecr.io/jenkins_demo/django_v1:new
         imagePullPolicy: Always
       imagePullSecrets:
       - name: acr-secret
